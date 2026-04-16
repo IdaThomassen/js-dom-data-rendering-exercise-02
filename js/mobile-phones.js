@@ -1,0 +1,136 @@
+"use strict";
+
+// mangler links til billeder på nogle
+
+const mobilePhones = [
+  {
+    id: 1,
+    brandname: "Apple",
+    brandmodel: "iPhone 15",
+    color: "black",
+    price: 3999,
+    memory: "128 GB",
+  },
+  {
+    id: 2,
+    brandname: "Apple",
+    brandmodel: "iPhone 16",
+    color: "black",
+    price: 4999,
+    memory: "128 GB",
+  },
+  {
+    id: 2,
+    brandname: "Apple",
+    brandmodel: "iPhone 16",
+    color: "black",
+    price: 4999,
+    memory: "128 GB",
+    img: "img/iphone-16-128-black.webp",
+  },
+  {
+    id: 3,
+    brandname: "Apple",
+    brandmodel: "iPhone 17",
+    color: "black",
+    price: 8999,
+    memory: "256 GB",
+    img: "img/iphone-17-256-black.webp",
+  },
+  {
+    id: 4,
+    brandname: "Apple",
+    brandmodel: "iPhone 17",
+    color: "white",
+    price: 8999,
+    memory: "256 GB",
+    img: "img/iphone-17-256-white.webp",
+  },
+  {
+    id: 5,
+    brandname: "Apple",
+    brandmodel: "iPhone 17 Pro Max",
+    color: "black",
+    price: 10999,
+    memory: "256 GB",
+    img: "img/iphone-17-pro-max-256-black.webp",
+  },
+  {
+    id: 6,
+    brandname: "OnePlus",
+    brandmodel: "OnePlus 11 5G",
+    color: "titan black",
+    price: 5499,
+    memory: "128 GB",
+    img: "img/oneplus-11-5G-128-titan-black.webp",
+  },
+  {
+    id: 7,
+    brandname: "OnePlus",
+    brandmodel: "OnePlus 15",
+    color: "infinite black",
+    price: 6499,
+    memory: "256 GB",
+    img: "img/oneplus-15-256-infinite-black.webp",
+  },
+  {
+    id: 8,
+    brandname: "Samsung",
+    brandmodel: "Samsung S25",
+    color: "navy",
+    price: 4999,
+    memory: "128 GB",
+    img: "img/samsung-s25-128-navy.webp",
+  },
+  {
+    id: 9,
+    brandname: "Samsung",
+    brandmodel: "Samsung S25",
+    color: "blueblack",
+    price: 5999,
+    memory: "256 GB",
+    img: "img/samsung-s25-256-blueblack.webp",
+  },
+  {
+    id: 10,
+    brandname: "Samsung",
+    brandmodel: "Samsung S26",
+    color: "black",
+    price: 6999,
+    memory: "256 GB",
+    img: "img/samsung-s26-256-black.webp",
+  },
+  {
+    id: 11,
+    brandname: "Samsung",
+    brandmodel: "Samsung S26 Ultra",
+    color: "black",
+    price: 7499,
+    memory: "256 GB",
+    img: "img/samsung-s26-ultra-256-black.webp",
+  },
+];
+
+const phonesContainer = document.querySelector("#phones-container");
+
+function displayPhones(phonesList) {
+  phonesContainer.innerHTML = "";
+
+  mobilePhones.forEach((item) => {
+    phonesContainer.innerHTML += `
+    <article>
+      <h2>${item.brandname}</h2>
+      <p>${item.brandmodel}</p>
+      <p>${item.color}</p>
+      <p>${item.price}</p>
+      <p>${item.memory}</p>
+      <figure>
+        <img src="${item.img}" alt="${item.brandmodel}">
+        <figcaption>${item.brandmodel}</figcaption>
+        </figure>
+    </article>
+    `;
+  });
+}
+
+displayPhones(mobilePhones);
