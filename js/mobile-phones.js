@@ -10,14 +10,7 @@ const mobilePhones = [
     color: "black",
     price: 3999,
     memory: "128 GB",
-  },
-  {
-    id: 2,
-    brandname: "Apple",
-    brandmodel: "iPhone 16",
-    color: "black",
-    price: 4999,
-    memory: "128 GB",
+    img: "img/iphone-15-128-black.webp",
   },
   {
     id: 2,
@@ -134,6 +127,3 @@ function displayPhones(phonesList) {
 }
 
 displayPhones(mobilePhones);
-
-
-
