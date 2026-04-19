@@ -1,6 +1,5 @@
 "use strict";
 
-// mangler links til billeder på nogle
 
 const mobilePhones = [
   {
@@ -106,17 +105,19 @@ const mobilePhones = [
 
 const phonesContainer = document.querySelector("#phones-container");
 
-function displayPhones(phonesList) {
+function displayPhones(phoneList) {
   phonesContainer.innerHTML = "";
 
-  mobilePhones.forEach((item) => {
+  phoneList.forEach((item) => {
     phonesContainer.innerHTML += `
     <article>
       <h2>${item.brandname}</h2>
-      <p>${item.brandmodel}</p>
-      <p>${item.color}</p>
-      <p>${item.price}</p>
-      <p>${item.memory}</p>
+      <h4>${item.brandmodel}</h4>
+      <ul>
+      <li>${item.color}</li>
+      <li>${item.memory}</li>
+      <li>${item.price}</li>
+      </ul>
       <figure>
         <img src="${item.img}" alt="${item.brandmodel}">
         <figcaption>${item.brandmodel}</figcaption>
